@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'iranyekanwebregular';
+    src: url('../../tools/font-src/iranyekanwebregular.woff');
+}
+
+header {
+    font-family: iranyekanwebregular;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: auto;
+    padding: 27px 7px;
+    transition: all 0.3s ease;
+}
+
+.headerUl {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.headerUl li {
+    margin: 0 15px;
+}
+
+.headerUl li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+.navbarDownArrow {
+    width: 8px;
+    margin-right: 5px;
+}
+
+.navbarActive {
+    color: #28457b;
+    background-color: rgba(232, 239, 254, 0.6);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.navbarActive:hover {
+    background-color: #fbf6d9;
+}
+
+.navbarLogo {
+    margin: 0 10px;
+}
+
+@media (max-width: 1200px) {
+    header {
+        width: 940px;
+    }
+}
+
+@media (max-width: 990px) {
+    header {
+        width: auto;
+        padding: 20px 60px;
+    }
+    .navbarActive {
+        display: none;
+    }
+    .headerUl li {
+        margin: 0 10px;
+    }
+    .navbarLogo {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerUl {
+        display: none;
+    }
+    header {
+        width: auto;
+        padding: 10px 8px;
+    }
+}
