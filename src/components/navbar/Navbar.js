@@ -1,11 +1,23 @@
-import React from 'react';
+import React , { useState } from 'react';
 import styles from './navbar.module.css'
 
 //tools
 import logo from '../../tools/images/logo-white.svg'
 import downArrow from '../../tools/images/down-arrow-svgrepo-com.svg'
+import hamburgerIcon from '../../tools/images/hamburger.svg'
+import crossIcon from '../../tools/images/cross.svg'
+import leftArrow from '../../tools/images/arrow.svg'
 
 const Navbar = () => {
+    const [dropDown , setDropDown] = useState();
+    const menuDropDownHandler = () => {
+        setDropDown(true)
+    }
+
+    const menuDropUpHandler = () => {
+        setDropDown(false)
+    }
+
     return (
         <div>
             <header>
@@ -36,6 +48,36 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </nav>
+                <img src={hamburgerIcon} alt='hamburger menu' className={styles.hamburgerIcon} onClick={menuDropDownHandler} />
+                <div className={dropDown ? styles.hamburgerMenuTrue : styles.hamburgerMenuFalse}>
+                    <div className={styles.crossIcon}>
+                        <img src={crossIcon} alt='cross' onClick={menuDropUpHandler} />
+                    </div>
+                    <div className={styles.hamburgerMenuItems}>
+                        <ul>
+                            <li>
+                                <a href='#'>تعرفه‌ها</a>
+                            </li>
+                            <li>
+                                <a href='#'>اپلیکیشن</a>
+                            </li>
+                            <div></div>
+                            <li>
+                                <a href='#'>سوالات متداول</a>
+                            </li>
+                            <li>
+                                <a href='#'>محصولات</a>
+                            </li>
+                            <li>
+                                <a href='#'>تماس با ما</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={styles.hamburgerMenuMoreItem}>
+                        <a href='#'>زرین‌پال من</a>
+                        <img src={leftArrow} alt='left arrow' />
+                    </div>
+                </div>
             </header>
         </div>
     );

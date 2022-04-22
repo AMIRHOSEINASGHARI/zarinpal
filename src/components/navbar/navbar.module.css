@@ -51,6 +51,79 @@ header {
     margin: 0 10px;
 }
 
+.hamburgerIcon {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerMenuFalse {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: all 0.2s ease-in-out;
+}
+.hamburgerMenuTrue {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateY(0%);
+    transition: all 0.2s ease-in-out;
+}
+
+.crossIcon {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.crossIcon img {
+    width: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.hamburgerMenuItems ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.hamburgerMenuItems ul div {
+    width: 85%;
+    height: 1px;
+    background-color: #eee;
+}
+
+.hamburgerMenuItems ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hamburgerMenuMoreItem {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    padding: 20px 40px;
+}
+
+.hamburgerMenuMoreItem a {
+    text-decoration: none;
+    color: #28457b;
+    margin-left: 5px;
+}
+
+.hamburgerMenuMoreItem img {
+    width: 20px;
+}
+
+/* ---------------media query......................... */
+
+
 @media (max-width: 1200px) {
     header {
         width: 940px;
@@ -79,6 +152,9 @@ header {
     }
     header {
         width: auto;
-        padding: 10px 8px;
+        padding: 20px;
+    }
+    .hamburgerIcon {
+        display: block;
     }
 }
