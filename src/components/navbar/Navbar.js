@@ -13,9 +13,24 @@ const Navbar = () => {
     const menuDropDownHandler = () => {
         setDropDown(true)
     }
-
     const menuDropUpHandler = () => {
         setDropDown(false)
+    }
+
+    const [productsDropDown , setProductsDropDown] = useState();
+    const productsMouseEnterHandler = () => {
+        setProductsDropDown(true)
+    }
+    const productsMouseLeaveHandler = () => {
+        setProductsDropDown(false)
+    }
+
+    const [detailesDropDown , setDetailesDropDown] = useState();
+    const detailsMouseEnterHandler = () => {
+        setDetailesDropDown(true)
+    }
+    const detailsMouseLeaveHandler = () => {
+        setDetailesDropDown(false)
     }
 
     return (
@@ -26,9 +41,35 @@ const Navbar = () => {
                 </div>
                 <nav>
                     <ul className={styles.headerUl}>
-                        <li className={styles.moreProducts}>
+                        <li className={styles.moreProducts} onMouseEnter={productsMouseEnterHandler} onMouseLeave={productsMouseLeaveHandler}>
                             <a href='#'>محصولات</a>
                             <img src={downArrow} alt='down arrow' className={styles.navbarDownArrow} />
+                            <div className={productsDropDown ? styles.moreProductsDropDownTrue : styles.moreProductsDropDownFalse}>
+                                <div className={styles.firstChild}>
+                                    <a href='#'>
+                                        <p>درگاه پرداخت</p>
+                                        <p>مهندسی شده برای فروش بیش‌تر</p>
+                                    </a>
+                                    <a href='#'>
+                                        <p>زرین‌لینک</p>
+                                        <p>لینک پرداخت در شبکه‌های اجتماعی</p>
+                                    </a>
+                                    <a href='#'>
+                                        <p>زرین‌پلاس</p>
+                                        <p>ابزار هوشمند سوددهی</p>
+                                    </a>
+                                </div>
+                                <div className={styles.secondChild}>
+                                    <a href='#'>
+                                        <p>زرین‌کارت</p>
+                                        <p>طلایی‌ترین کارتِ بانکی</p>
+                                    </a>
+                                    <a href='#'>
+                                        <p>تسهیم</p>
+                                        <p>درگاه پرداخت اشتراکی</p>
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <a href='#'>تعرفه‌ها</a>
@@ -39,9 +80,26 @@ const Navbar = () => {
                         <li>
                             <a href='#'>تماس با ما</a>
                         </li>
-                        <li className={styles.moreDetails}>
+                        <li className={styles.moreDetails} onMouseEnter={detailsMouseEnterHandler} onMouseLeave={detailsMouseLeaveHandler}>
                             <a href='#'>بیش‌تر</a>
                             <img src={downArrow} alt='down arrow' className={styles.navbarDownArrow} />
+                            <ul className={detailesDropDown ? styles.moreDetailsDropDownTrue : styles.moreDetailsDropDownFalse}>
+                                <li>
+                                    <a href='#'>وبلاگ</a>
+                                </li>
+                                <li>
+                                    <a href='#'>دریافت شماره شبا</a>
+                                </li>
+                                <li>
+                                    <a href='#'>سوالات متداول</a>
+                                </li>
+                                <li>
+                                    <a href='#'>اپلیکیشن</a>
+                                </li>
+                                <li>
+                                    <a href='#'>زرین‌بین</a>
+                                </li>
+                            </ul>
                         </li>
                         <li className={styles.navbarActive}>
                             <a href='#'>زرین‌پال من</a>

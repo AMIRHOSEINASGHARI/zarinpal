@@ -51,6 +51,8 @@ header {
     margin: 0 10px;
 }
 
+/* -----------------------------------------hamburger menu------------------------------------ */
+
 .hamburgerIcon {
     display: none;
     cursor: pointer;
@@ -121,7 +123,103 @@ header {
     width: 20px;
 }
 
-/* ---------------media query......................... */
+/* -----------------------------------------more products drop down------------------------------------ */
+
+.moreProducts {
+    position: relative;
+}
+
+.moreProductsDropDownFalse {
+    width: 372px;
+    display: flex;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    position: absolute;
+    right: -200px;
+    top: 23px;
+    display: none;
+}
+.moreProductsDropDownTrue {
+    width: 372px;
+    display: flex;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    padding: 7px 7px 7px 20px;
+    position: absolute;
+    right: -175px;
+    top: 23px;
+    animation: fadeInDown 0.5s;
+}
+
+.moreProductsDropDownTrue a {
+    display: block;
+    padding: 5px 10px;
+}
+
+.moreProductsDropDownTrue a p:first-child {
+    font-size: 0.9rem;
+}
+
+.moreProductsDropDownTrue a p:last-child {
+    font-size: 0.7rem;
+    margin-top: -5px;
+}
+
+.moreProductsDropDownTrue a:hover {
+    background-color: rgba(232, 239, 254, 0.6);
+    border-radius: 10px;
+}
+
+
+
+/* -----------------------------------------more details drop down------------------------------------ */
+
+.moreDetails {
+    position: relative;
+}
+
+.moreDetailsDropDownFalse {
+    position: absolute;
+    width: 140px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    list-style: none;
+    padding: 20px 6px;
+    left: -55px;
+    display: none;
+}
+
+.moreDetailsDropDownTrue {
+    position: absolute;
+    width: 140px;
+    background-color: rgb(248, 248, 248);
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    list-style: none;
+    padding: 20px 6px;
+    left: -55px;
+    animation: fadeInDown 0.5s;
+}
+
+.moreDetailsDropDownTrue li {
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------animations------------------------------------ */
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* -----------------------------------------media query------------------------------------ */
 
 
 @media (max-width: 1200px) {
