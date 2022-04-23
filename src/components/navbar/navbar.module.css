@@ -10,8 +10,14 @@ header {
     justify-content: space-between;
     width: 1170px;
     margin: auto;
-    padding: 27px 7px;
+    padding: 10px 7px;
     transition: all 0.3s ease;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .headerUl {
@@ -250,9 +256,15 @@ header {
     }
     header {
         width: auto;
-        padding: 20px;
+        padding: 20px 35px;
     }
     .hamburgerIcon {
         display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 20px;
     }
 }
