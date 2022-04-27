@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-import styles from './navbar.module.css'
+import styles from './Navbar.module.css'
 
 //tools
 import logo from '../../tools/images/logo-white.svg'
