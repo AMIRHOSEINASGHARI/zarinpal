@@ -1,5 +1,6 @@
 import React from 'react';
 import FirstCart from './components/carts/FirstCart';
+import FivthCart from './components/carts/FivthCart';
 import ForthCart from './components/carts/ForthCart';
 import SecondCart from './components/carts/SecondCart';
 import ThirdCart from './components/carts/ThirdCart';
@@ -15,6 +16,7 @@ const App = () => {
       <SecondCart />
       <ThirdCart />
       <ForthCart />
+      <FivthCart />
     </div>
   );
 };
