@@ -1,0 +1,82 @@
+@font-face {
+    font-family: YekanBakhHeavy;
+    src: url('../../tools/font-src/YekanBakhHeavy.woff');
+}
+@font-face {
+    font-family: iranyekanwebmedium;
+    src: url('../../tools/font-src/iranyekanwebmedium.woff');
+}
+@font-face {
+    font-family: YekanBakhMedium;
+    src: url('../../tools/font-src/YekanBakhMedium.woff');
+}
+
+.container {
+    width: 1170px;
+    margin: 30px auto;
+}
+
+.container div {
+    border: 1px solid silver;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.container h1 {
+    font-family: YekanBakhHeavy;
+    font-size: 1.8rem;
+    letter-spacing: -0.4px;
+    margin-bottom: -10px;
+}
+
+.container h2 {
+    color: #747480;
+    font-family: YekanBakhMedium;
+    letter-spacing: -0.8px;
+    font-size: 1.3rem;
+}
+
+.container a {
+    text-decoration: none;
+    color: #000;
+    font-family: YekanBakhMedium;
+    background-color: #ffd900;
+    padding: 5px 13px;
+    border-radius: 10px;
+}
+
+/* -------------------------------------------------media query-------------------------------------------- */
+
+@media (max-width: 1200px) {
+    .container {
+        width: 940px;
+    }
+}
+@media (max-width: 990px) {
+    .container {
+        margin: -20px auto;
+        width: auto;
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .container h1 {
+    font-size: 1.5rem;
+    }
+}
+@media (max-width: 574px) {
+    .container h1 {
+        font-size: unset;
+    }
+    .container h2 {
+        font-size: 1rem;
+    }
+}

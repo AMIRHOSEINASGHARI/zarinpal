@@ -7,6 +7,7 @@ import SecondCart from './components/carts/SecondCart';
 import ThirdCart from './components/carts/ThirdCart';
 import LandingPage from './components/landing page/LandingPage';
 import Navbar from './components/navbar/Navbar';
+import StartingBox from './components/starting box/StartingBox';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <ForthCart />
       <FivthCart />
       <Articles />
+      <StartingBox />
     </div>
   );
 };
