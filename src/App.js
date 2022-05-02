@@ -1,5 +1,6 @@
 import React from 'react';
 import Articles from './components/articles/Articles';
+import Bell from './components/bell/Bell';
 import FirstCart from './components/carts/FirstCart';
 import FivthCart from './components/carts/FivthCart';
 import ForthCart from './components/carts/ForthCart';
@@ -25,6 +26,7 @@ const App = () => {
       <StartingBox />
       <Report />
       <Footer />
+      <Bell />
     </div>
   );
 };

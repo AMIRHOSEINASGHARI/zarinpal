@@ -1,0 +1,17 @@
+.bell {
+    background-color: #2e82ff;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 7px;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
+}
+
+.bell img {
+    width: 30px;
+}
