@@ -1,0 +1,133 @@
+@font-face {
+    font-family: YekanBakhHeavy;
+    src: url('../../tools/font-src/YekanBakhHeavy.woff');
+}
+@font-face {
+    font-family: iranyekanwebmedium;
+    src: url('../../tools/font-src/iranyekanwebmedium.woff');
+}
+@font-face {
+    font-family: YekanBakhBold;
+    src: url('../../tools/font-src/YekanBakhBold.woff');
+}
+
+footer {
+    width: 1170px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-right: -2rem;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+footer ul h1 {
+    font-family: YekanBakhBold;
+    font-size: 17px;
+}
+
+footer ul h1:hover {
+    color: #21457f;
+}
+
+footer ul li {
+    margin: 20px 0;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #000;
+    font-family: iranyekanwebmedium;
+}
+
+.socialNetworks h1 {
+    font-family: YekanBakhBold;
+    font-size: 20px;
+    margin-right: 10px;
+    letter-spacing: -1px;
+}
+
+
+.socialNetworks .socialIcons img {
+    background: rgba(232, 239, 254, 0.6);
+    width: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 0 8px;
+}
+
+/* ------------------------------------------------------media query------------------------------------------------- */
+
+@media (max-width: 1200px) {
+    footer {
+        width: 940px;
+    }
+    footer ul {
+        margin-left: -20px;
+    }
+}
+@media (max-width: 990px) {
+    footer {
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .lists {
+        margin-right: 0;
+    }
+    footer ul {
+        margin-left: 0px;
+    }
+    .socialNetworks {
+        margin-right: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .lists {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+    }
+}
+@media (max-width: 574px) {
+    footer ul h1 {
+        font-size: 13px;
+        letter-spacing: -0.5px;
+    }
+    footer ul li {
+        margin: 5px 0;
+    }
+    footer ul a {
+        font-size: 13px;
+    }
+    .socialNetworks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+    }
+    .socialNetworks h1 {
+        font-size: 15px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .socialNetworks .socialIcons img {
+        width: 16px;
+        padding: 10px;
+        border-radius: 12px;
+        margin: 0 8px;
+    }
+    
+}
